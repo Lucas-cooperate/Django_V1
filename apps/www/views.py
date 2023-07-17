@@ -4,6 +4,11 @@ from django.urls import reverse
 
 
 # Create your views here.
+def index(request):
+    url = reverse("v2")
+    print(url)
+    return HttpResponse("index!!!")
+
 
 def login(request):
     result = reverse("n1")
