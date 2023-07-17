@@ -1,13 +1,23 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse
+from django.views import View
 
 
 # Create your views here.
-def index(request):
-    url = reverse("v2")
-    print(url)
-    return HttpResponse("index!!!")
+class UserView(View):
+    # 根据请求方式触发不同请求！
+    def get(self, request):
+        return HttpResponse("User GET!!")
+
+    def post(self, request):
+        return HttpResponse("User POST!!")
+
+    def put(self, request):
+        return HttpResponse("User PUT!!")
+
+    def delete(self, request):
+        return HttpResponse("User DELETE!!")
 
 
 def login(request):
@@ -24,5 +34,3 @@ def info(request, v1):
 def yy(request, a1, a2, a3):
     print(a1, a2, a3)
     return HttpResponse(f"{a1}-{a2}-{a3}")
-
-
