@@ -25,5 +25,6 @@ urlpatterns = [
     re_path(r'yy/(\d{4})-(\d{2})-(\d{2})/', views.yy),
     path('web/', include("apps.www.urls")),
     path('api/', include("apps.app01.urls")),
-    path('user/', views.UserView.as_view())
+    path('user/', views.UserView.as_view()),
+    path('demo/', views.demo),
 ]
