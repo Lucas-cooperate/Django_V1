@@ -27,4 +27,8 @@ urlpatterns = [
     path('api/', include("apps.app01.urls")),
     path('user/', views.UserView.as_view()),
     path('demo/', views.demo),
+    path('demo1/', views.demo1),
+    path('order/', views.order),
+    path('excel/', views.excel),
+    path('my_func/', views.nb),
 ]

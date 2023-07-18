@@ -1,0 +1,16 @@
+{% load xxx %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>{{ ctime | date:"Y-m-d H:i:s" }}</div>
+    <div>{{ name }}</div>
+    <div>{{ num }}</div>
+    <div>{% my_func "佩琪" "王坤" name %}</div>
+    <div>{% my_xo num %}</div>
+    <div>{{ "alex" | my_tt:'理科' }}</div>
+</body>
+</html>
